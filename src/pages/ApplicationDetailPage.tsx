@@ -121,7 +121,7 @@ export default function ApplicationDetailPage() {
   const downloadReport = (version: number, generatedAt: string) => {
     const d = app.data
     const lines = [
-      `CANARA BANK — RISK REPORT (v${version})`,
+      `ACME BANK — RISK REPORT (v${version})`,
       `Generated: ${new Date(generatedAt).toLocaleString('en-IN')}`,
       `════════════════════════════════════════`,
       `Application No : ${app.applicationNo}`,
@@ -135,7 +135,7 @@ export default function ApplicationDetailPage() {
       `Merchant Details`,
       `────────────────`,
       `Mobile         : ${d.merchantMobile || '-'}`,
-      `VPA            : ${d.merchantVpa ? `${d.merchantVpa}@cnrb` : '-'}`,
+      `VPA            : ${d.merchantVpa ? `${d.merchantVpa}@acmb` : '-'}`,
       `PAN            : ${d.merchantPanNumber || '-'}`,
       `Udyam No.      : ${d.udyamNumber || '-'}`,
       `GST            : ${d.gstNumber || '-'}`,

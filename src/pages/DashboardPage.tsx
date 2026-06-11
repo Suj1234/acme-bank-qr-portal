@@ -92,7 +92,7 @@ export default function DashboardPage() {
 
   const downloadRiskReport = (a: Application) => {
     const lines = [
-      `CANARA BANK — RISK REPORT`,
+      `ACME BANK — RISK REPORT`,
       `Generated: ${new Date().toLocaleString()}`,
       `═══════════════════════════════════════`,
       `Application No : ${a.applicationNo}`,
@@ -290,7 +290,7 @@ export default function DashboardPage() {
           </div>
         </div>
 
-        <p className="text-center text-[11px] text-gray-400 mt-4">Powered by <span className="font-semibold text-[#003087]">Canara Bank</span></p>
+        <p className="text-center text-[11px] text-gray-400 mt-4">Powered by <span className="font-semibold text-[#003087]">Acme Bank</span></p>
       </div>
     </AppLayout>
   )

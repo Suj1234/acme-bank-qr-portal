@@ -1,4 +1,4 @@
-# Claude Instructions — Canara Bank QR Portal
+# Claude Instructions — Acme Bank QR Portal
 
 ## PRD Update Protocol
 
@@ -28,7 +28,7 @@ Never update the PRD silently. Always ask first.
 
 ## General Behavior
 
-- This project is for Canara Bank — a regulated banking context. Be conservative with data handling suggestions.
+- This project is for Acme Bank — a regulated banking context. Be conservative with data handling suggestions.
 - All admin users have L1 or L2 roles — never treat admins as a single homogeneous group.
 - Branch officers are read-only after submission — never suggest edit flows for branch post-submission.
 - The app is currently frontend-only (localStorage). Assume no backend until told otherwise.

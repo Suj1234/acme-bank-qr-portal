@@ -47,10 +47,10 @@ export default function LoginPage() {
         {/* Logo card */}
         <div className="text-center mb-6">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-white rounded-2xl shadow-lg mb-3">
-            <span className="text-[#003087] text-xl font-black">CB</span>
+            <span className="text-[#003087] text-xl font-black">AB</span>
           </div>
-          <h1 className="text-white text-2xl font-bold tracking-wide">CANARA BANK</h1>
-          <p className="text-blue-300 text-sm mt-0.5">Together We Can</p>
+          <h1 className="text-white text-2xl font-bold tracking-wide">ACME BANK</h1>
+          <p className="text-blue-300 text-sm mt-0.5">Your Trusted Banking Partner</p>
         </div>
 
         {/* Form card */}

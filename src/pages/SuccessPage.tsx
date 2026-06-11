@@ -9,8 +9,8 @@ export default function SuccessPage() {
       <div className="bg-white rounded-xl border border-gray-200 px-12 py-10 flex flex-col items-center max-w-md w-full mx-4 shadow-sm">
 
         <div className="mb-6 text-center">
-          <div className="text-[#003087] text-xl font-bold tracking-wide">CANARA BANK</div>
-          <div className="text-gray-400 text-xs tracking-widest mt-0.5">Together We Can</div>
+          <div className="text-[#003087] text-xl font-bold tracking-wide">ACME BANK</div>
+          <div className="text-gray-400 text-xs tracking-widest mt-0.5">Your Trusted Banking Partner</div>
         </div>
 
         <CheckCircle2 size={60} className="text-green-500 mb-4" strokeWidth={1.5} />

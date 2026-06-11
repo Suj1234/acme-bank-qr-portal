@@ -21,7 +21,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
       <aside className="w-16 bg-[#003087] flex flex-col items-center py-4 shrink-0 z-10">
         {/* Logo */}
         <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center mb-6 shrink-0">
-          <span className="text-[#003087] text-xs font-black leading-none">CB</span>
+          <span className="text-[#003087] text-xs font-black leading-none">AB</span>
         </div>
 
         {/* Nav */}
@@ -47,7 +47,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
         {/* Top bar */}
         <header className="bg-white border-b border-gray-200 px-5 py-2.5 flex items-center justify-between shrink-0">
           <div className="text-sm text-gray-500">
-            <span className="font-semibold text-[#003087]">Canara Bank</span>
+            <span className="font-semibold text-[#003087]">Acme Bank</span>
             <span className="mx-2 text-gray-300">|</span>
             QR Add On Portal
           </div>

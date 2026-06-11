@@ -1,5 +1,5 @@
 # Product Requirements Document
-## Canara Bank — QR Add On Portal
+## Acme Bank — QR Add On Portal
 
 **Last Updated:** 2026-04-24  
 **Status:** Living Document — updated with every major discussion (confirmation required before each update)  
@@ -20,7 +20,7 @@
 
 ## 1. Product Overview
 
-A web-based portal for Canara Bank that enables branch officers to initiate and submit **QR Add On** applications for merchants. Admin users (L1 and L2) review, approve, reject, or escalate these applications through a structured workflow.
+A web-based portal for Acme Bank that enables branch officers to initiate and submit **QR Add On** applications for merchants. Admin users (L1 and L2) review, approve, reject, or escalate these applications through a structured workflow.
 
 **Tech Stack:**
 - Frontend: React 19 + TypeScript + Vite
