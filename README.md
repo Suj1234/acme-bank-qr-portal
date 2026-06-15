@@ -1,73 +1,59 @@
-# React + TypeScript + Vite
+# Acme Bank QR Add-On Portal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web portal for managing QR Add-On applications for merchants — built for Acme Bank's branch officers and admin reviewers.
 
-Currently, two official plugins are available:
+## What It Does
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Branch officers initiate QR Add-On applications for merchants. Admin users (L1 and L2) review and action them through a structured approval workflow.
 
-## React Compiler
+**Application lifecycle:**
+`Draft → Submitted → Under Review → Pending L2 Approval → Approved / Rejected`
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- **React 19** + **TypeScript** + **Vite**
+- **Tailwind CSS 4**
+- **React Router DOM 7**
+- **Lucide React** (icons)
+- State via React Context + localStorage (no backend yet)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Getting Started
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Open [http://localhost:5173](http://localhost:5173).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## User Roles
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+| Role | Access |
+|------|--------|
+| Branch Officer | Initiate applications, view own submissions (read-only after submit) |
+| Admin L1 | Review, edit merchant details, approve / reject / escalate to L2 |
+| Admin L2 | Final approval or rejection on escalated applications |
+
+## Key Features
+
+- **Dashboard** — paginated list with filters (application no., merchant name, account, status, date range) and sorting
+- **Application Form** — 9-section form covering account details, merchant info, MCC, transaction settings, UPI products, delivery address, and remarks
+- **Detail View** — tabbed UI (Overview, Merchant Details, Transaction Settings, Risk Report, Audit Trail) with URL-persisted tab state
+- **Risk Report Versioning** — L1 can regenerate risk reports; all versions (v1, v2…) are retained with timestamps
+- **Audit Trail** — full action history with color-coded status badges and referral chain visibility
+
+## Project Structure
+
 ```
+src/
+├── components/    # Layout wrappers
+├── context/       # Auth state (AuthContext)
+├── pages/         # LoginPage, DashboardPage, ApplicationDetailPage, InitiateQR, SuccessPage
+└── store/         # Mock data and application state
+docs/
+└── PRD.md         # Product requirements and decision log
+```
+
+## Status
+
+Frontend-only. Backend API integration is planned for a future phase.

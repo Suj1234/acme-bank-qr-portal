@@ -2,7 +2,7 @@
   "permissions": {
     "allow": [
       "Bash(npm run *)",
-      "Bash(git -C \"d:/Antigravity - D/canara-bank\" status)",
+      "Bash(git -C \"e:/Antigravity/canara-bank\" status)",
       "Bash(gh auth *)",
       "PowerShell(gh auth status 2>&1)",
       "PowerShell(winget install --id GitHub.cli --accept-package-agreements --accept-source-agreements 2>&1)",
